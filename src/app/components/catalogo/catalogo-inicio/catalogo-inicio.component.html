@@ -1,0 +1,25 @@
+<div class="container mt-2">
+    <h3 class="text-center">Tienda Online</h3>
+    <hr/>
+    <div class="row">
+        @for(item of productos; track item.id){
+            <div class="col-sm-3 mt-1">
+                <div class="card">
+                    <img [src]="'img/' + item.imagen"/>
+                    <div class="card-body">
+                        <p class="fw-bold">{{item.titulo}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button (click)="agregarProducto(item)" type="button" class="btn btn-sm btn-dark">
+                                <i class="fa fa-shopping-cart"></i>
+                                Agregar
+                            </button>
+                            <div class="fw-bold">{{item.precio}}/€
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

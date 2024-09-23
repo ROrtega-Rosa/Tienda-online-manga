@@ -1,0 +1,14 @@
+[
+    { "id": 1, "titulo": "Dragon ball", "precio": 19.99 , "imagen": "dragonball.jpg"},
+    { "id": 2, "titulo": "Fushigi yugi", "precio": 17.50 , "imagen": "fushigiyugi.jpg"},
+    { "id": 3, "titulo": "Urusei yatsura", "precio": 18.99 , "imagen": "lamu.jpg"},
+    { "id": 4, "titulo": "Nana", "precio": 29.90 , "imagen": "nana.jpg"},
+    { "id": 5, "titulo": "Naruto", "precio": 34.80 , "imagen": "naruto.jpg"},
+    { "id": 6, "titulo": "Ranma", "precio": 12.00 , "imagen": "ranma.jpg"},
+    { "id": 7, "titulo": "Sailor moon", "precio": 21.99 , "imagen": "sailormoon.jpeg"},
+    { "id": 8, "titulo": "Yu yu hakusho", "precio": 34.00 , "imagen": "yuyuhakusho.jpg"},
+    { "id": 9, "titulo": "Shin chan", "precio": 14.00 , "imagen": "shinChan.jpg"},
+    { "id": 10, "titulo": "Full metal alchemist ", "precio": 16.00 , "imagen": "fullMetal.jpeg"},
+    { "id": 11, "titulo": "Ayashi no ceres ", "precio": 17.00 , "imagen": "ceres.jpg"},
+    { "id": 12, "titulo": "Doraemon ", "precio": 17.00 , "imagen": "doraemon.jpg"}
+]

@@ -1,0 +1,70 @@
+<div class="container-fluid mt-3">
+  <h5>Mi Carrito</h5>
+  <hr />
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Imagen</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>Importe</th>
+                  <th>Eliminar</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for(item of listCarrito; track item.producto){ 
+                    <tr>
+                        <td>{{item.producto.titulo}}</td>
+                        <td>
+                        <img [src]="'/img/'+item.producto.imagen" width="50" height="60"/>
+                        </td>
+                        <td>{{item.producto.precio}} €</td>
+                        <td>
+                          <input type="number" class="form-control" (change)="actualizar(item,$index)" [(ngModel)]="item.cantidad" min="1" style="width: 60px; display: inline-block;">
+                        </td>
+                        <td>{{(item.producto.precio * item.cantidad) | number: '1.2-2'}} €</td>
+                        <td>
+                          <button type="button" (click)="eliminarItem($index)" class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                }
+                @if(listCarrito.length == 0){
+                    <tr>
+                        <td colspan="6" class="text-center">No hay productos en el carrito</td>
+                    </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <h5>Resumen de la compra</h5>
+                    <hr/>
+                    <div class="d-flex justify-content-between mb-4">
+                        <p class="mb-2">Total</p>
+                        <p class="mb-2">{{carritoService.total()}}€</p>
+                    </div>
+                    <button type="button" [disabled]="listCarrito.length == 0" class="btn btn-dark btn-block btn-lg">
+                        <div class="d-flex justify-content-between">
+                            <span>Procesar</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
